@@ -84,7 +84,7 @@ export default function Hero({ onDownload }: { onDownload: () => void }) {
       <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.65 }}
         style={{ display: "flex", gap: "2.5rem", justifyContent: "center", flexWrap: "wrap" }}>
         {[
-          { count: 5, suffix: "", label: "Years Exp." },
+          { count: 8, suffix: "", label: "Years Exp." },
           { count: 60, suffix: "%", label: "Deploy Speed ↑" },
           { count: 99.9, suffix: "%", label: "Uptime" },
           { count: 10, suffix: "%", label: "Efficiency ↑" },
