@@ -6,6 +6,7 @@ const contacts = [
   { icon: "📞", label: "Phone", value: resumeData.basics.phone, href: `tel:${resumeData.basics.phone}` },
   { icon: "✉", label: "Email", value: resumeData.basics.email, href: `mailto:${resumeData.basics.email}` },
   { icon: "in", label: "LinkedIn", value: "ashwani-k-singh", href: resumeData.basics.links.linkedin, isLinkedIn: true },
+  { icon: "gh", label: "GitHub", value: "ashwanikrsingh1804", href: resumeData.basics.links.github, isGitHub: true },
   { icon: "📍", label: "Location", value: resumeData.basics.location, href: null, isGreen: true },
 ];
 
