@@ -16,7 +16,7 @@ export const resumeData = {
     {
       company: "Bethel Digitech",
       role: "Cloud Engineer",
-      dates: "April 2024 – April 2025",
+      dates: "April 2023 – April 2024",
       duration: "1 year 1 month",
       location: "Dublin, County Dublin, Ireland",
       chips: ["AWS", "EC2", "VPC", "CloudWatch", "Route53", "IaC", "HIPAA"],
