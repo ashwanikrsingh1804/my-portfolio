@@ -14,6 +14,22 @@ export const resumeData = {
 
   experience: [
     {
+      company: "Dublin Airport Authority",
+      role: "Application Analyst",
+      dates: "May 2024 – Present",
+      duration: "1 year 10 month",
+      location: "Dublin, County Dublin, Ireland",
+      chips: ["Azure", "Cloud Architecture", "CI/CD", "UAT Testing", "System Security", "Documentation"],
+      highlights: ["15–20% shorter queues", "+25% validation automation", "Improved security compliance"],
+      bullets: [
+        "Played a key role in architecting and supporting the Any-to-Any Image Validation System, enabling real-time X-ray image distribution across multiple screening operator workstations within terminals, improving resource utilization and reducing peak-hour queue times by 15–20%.",
+        "Contributed to the rollout of the Fast Track Security Integration Platform, integrating airline boarding pass validation systems with cloud-hosted eligibility services, increasing automated passenger validation rates by 25%.",
+        "Produced technical documentation including cloud architecture diagrams, SOPs, and disaster recovery procedures to support operational continuity and audit readiness.",
+        "Supported CI/CD-style deployment validation and conducted UAT and regression testing for security technology releases prior to production rollout.",
+        "Performed system patching, vulnerability remediation, and configuration management across Azure environments, strengthening security posture and ensuring regulatory compliance.",
+      ],
+    },
+    {
       company: "Bethel Digitech",
       role: "Cloud Engineer",
       dates: "April 2023 – April 2024",
