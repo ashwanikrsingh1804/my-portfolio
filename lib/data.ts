@@ -112,8 +112,8 @@ export const resumeData = {
   ],
 
   education: [
-    { degree: "Master of Science — Cloud Computing", school: "National College of Ireland", dates: "September 2022 – November 2023" },
-    { degree: "Bachelor of Engineering — Information Technology", school: "Dr. Ambedkar Institute Of Technology", dates: "2012 – 2020" },
+    { degree: "Master of Science — Cloud Computing", school: "National College of Ireland", dates: "2023" },
+    { degree: "Bachelor of Engineering — Information Technology", school: "Dr. Ambedkar Institute Of Technology", dates: "2020" },
   ],
 
   certifications: [
