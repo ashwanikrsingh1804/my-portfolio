@@ -39,7 +39,7 @@ export default function Navbar({ theme, toggleTheme }: { theme: string; toggleTh
         <div
           onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
           style={{ fontFamily: "Syne,sans-serif", fontWeight: 800, fontSize: "1.1rem", color: "var(--accent)", cursor: "pointer" }}
-        >Ashwnai</div>
+        >Ashwani</div>
 
         <ul style={{ display: "flex", gap: "2rem", listStyle: "none", margin: 0, padding: 0 }}
             className="hidden md:flex">

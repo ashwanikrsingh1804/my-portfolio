@@ -2,9 +2,9 @@ export const resumeData = {
   basics: {
     name: "Ashwani Kumar Singh",
     title: "Cloud Support | MS Cloud Computing, Node.js, Python",
-    location: "Dublin, County Dublin, Ireland",
+    location: "Bengaluru, Karnataka, India",
     email: "singhashwani1804@gmail.com",
-    phone: "+35388414347",
+    phone: "+91-9916944305",
     links: {
       linkedin: "https://www.linkedin.com/in/ashwani-k-singh",
       github: "https://github.com/ashwanikrsingh1804",
