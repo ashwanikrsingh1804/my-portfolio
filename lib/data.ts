@@ -3,7 +3,7 @@ export const resumeData = {
     name: "Ashwani Kumar Singh",
     title: "Cloud Engineer | AWS & Data Integration Specialist",
     location: "Bangalore, India",
-    email: "singhashwnai1804@gmail.com",
+    email: "singhashwani1804@gmail.com",
     phone: "+91 9916944305",
     links: {
       linkedin: "https://www.linkedin.com/in/ashwani-k-singh",
