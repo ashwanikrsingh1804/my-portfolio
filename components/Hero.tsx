@@ -34,7 +34,7 @@ export default function Hero({ onDownload }: { onDownload: () => void }) {
           border: "1px solid rgba(0,212,170,.2)", padding: ".35rem 1rem",
           borderRadius: 100, marginBottom: "1.8rem", display: "inline-block",
           background: "rgba(0,212,170,.04)",
-        }}>☁ Available for Cloud Engineering Roles</span>
+        }}>☁ Open to New Cloud Engineering Opportunities</span>
       </motion.div>
 
       <motion.h1
@@ -49,7 +49,7 @@ export default function Hero({ onDownload }: { onDownload: () => void }) {
 
       <motion.p initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.35 }}
         style={{ fontSize: "clamp(1rem,2.5vw,1.4rem)", color: "var(--text2)", fontWeight: 300, marginBottom: "1.5rem", letterSpacing: ".02em" }}>
-        Cloud Engineer · MS Cloud Computing · Node.js · Python
+        {resumeData.basics.title}
       </motion.p>
 
       <motion.p initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.4 }}
@@ -59,7 +59,7 @@ export default function Hero({ onDownload }: { onDownload: () => void }) {
 
       <motion.p initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.45 }}
         style={{ maxWidth: 620, margin: "0 auto 2.5rem", color: "var(--text2)", lineHeight: 1.75, fontSize: "1rem" }}>
-        Designing and implementing scalable cloud infrastructures that drive operational efficiency and security — with a data-driven mindset built across cloud engineering, risk analytics, and technical leadership.
+        Results-driven Cloud Engineer with 8+ years across AWS, Snowflake, ETL, and data integration — skilled at keeping platforms stable, pipelines running, and escalations closed fast.
       </motion.p>
 
       <motion.div initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.55 }}
@@ -81,14 +81,10 @@ export default function Hero({ onDownload }: { onDownload: () => void }) {
           }}>⬇ Download Resume</button>
       </motion.div>
 
+      {/* Stats — driven from data.ts */}
       <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.65 }}
         style={{ display: "flex", gap: "2.5rem", justifyContent: "center", flexWrap: "wrap" }}>
-        {[
-          { count: 8, suffix: "", label: "Years Exp." },
-          { count: 60, suffix: "%", label: "Deploy Speed ↑" },
-          { count: 99.9, suffix: "%", label: "Uptime" },
-          { count: 10, suffix: "%", label: "Efficiency ↑" },
-        ].map(s => (
+        {resumeData.basics.stats.map(s => (
           <div key={s.label} style={{ textAlign: "center" }}>
             <div style={{ fontFamily: "Syne,sans-serif", fontWeight: 800, fontSize: "2rem", color: "var(--accent)" }}>
               <Counter target={s.count} suffix={s.suffix} />

@@ -1,5 +1,5 @@
 "use client";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import AnimatedBackground from "@/components/AnimatedBackground";
 import Splash from "@/components/Splash";
 import Navbar from "@/components/Navbar";
@@ -13,9 +13,9 @@ import Skills from "@/components/Skills";
 import Education from "@/components/Education";
 import Contact from "@/components/Contact";
 import ResumeModal from "@/components/ResumeModal";
+import { resumeData } from "@/lib/data";
 
 export default function Home() {
-  const [splashDone, setSplashDone] = useState(false);
   const [theme, setTheme] = useState<"dark" | "light">("dark");
   const [showModal, setShowModal] = useState(false);
 
@@ -27,7 +27,7 @@ export default function Home() {
 
   return (
     <>
-      <Splash onDone={() => setSplashDone(true)} />
+      <Splash onDone={() => {}} />
       <AnimatedBackground />
       <ScrollProgress />
       <SectionDots />
@@ -37,17 +37,23 @@ export default function Home() {
         <Hero onDownload={() => setShowModal(true)} />
         <ImpactStrip />
 
+        {/* About — fully driven from data.ts */}
         <section id="about" style={{ position: "relative", zIndex: 1, padding: "6rem 2rem", maxWidth: 1100, margin: "0 auto" }}>
           <div style={{ marginBottom: "3.5rem" }}>
-            <span style={{ fontFamily: "JetBrains Mono,monospace", fontSize: ".68rem", letterSpacing: ".3em", textTransform: "uppercase", color: "var(--accent)", display: "block", marginBottom: ".7rem" }}>// 01 — About</span>
-            <h2 style={{ fontFamily: "Syne,sans-serif", fontSize: "clamp(2rem,4vw,3rem)", fontWeight: 800, lineHeight: 1.1, letterSpacing: "-.02em" }}>Cloud-native by design,<br/>data-driven by instinct.</h2>
+            <span style={{ fontFamily: "JetBrains Mono,monospace", fontSize: ".68rem", letterSpacing: ".3em", textTransform: "uppercase", color: "var(--accent)", display: "block", marginBottom: ".7rem" }}>
+              // 01 — About
+            </span>
+            <h2 style={{ fontFamily: "Syne,sans-serif", fontSize: "clamp(2rem,4vw,3rem)", fontWeight: 800, lineHeight: 1.1, letterSpacing: "-.02em" }}>
+              Cloud-native by design,<br />data-driven by instinct.
+            </h2>
             <div style={{ width: "3rem", height: 2, marginTop: "1rem", background: "linear-gradient(90deg,var(--accent),transparent)" }} />
           </div>
           <div style={{ maxWidth: 700 }}>
-            <p style={{ color: "var(--text2)", lineHeight: 1.9, fontSize: "1rem", marginBottom: "1.2rem" }}>Cloud & Data Support Engineer with 8+ years of experience helping organizations build, operate, and scale reliable cloud and data platforms. I specialize in troubleshooting complex systems, optimizing cloud infrastructure, and supporting mission-critical applications across AWS, Azure, and modern data platforms.</p>
-            <p style={{ color: "var(--text2)", lineHeight: 1.9, fontSize: "1rem", marginBottom: "1.2rem" }}>Currently working with Dublin Airport Authority as an Application Analyst, I support security and operational technology systems that power airport screening infrastructure. My work includes architecting and maintaining real-time image validation systems and integrating airline boarding pass validation with cloud-hosted eligibility services—helping improve automated passenger validation and reduce operational bottlenecks during peak hours.</p>
-            <p style={{ color: "var(--text2)", lineHeight: 1.9, fontSize: "1rem", marginBottom: "1.2rem" }}>Previously at Bethel Digitech in Ireland, I worked as an AWS Cloud Engineer delivering cloud-native data integration and ETL solutions using AWS services, Python, Terraform, and Snowflake. I focused on resolving complex production issues, improving deployment reliability, and collaborating with engineering teams to optimize APIs and large-scale data pipelines.</p>
-            <p style={{ color: "var(--text2)", lineHeight: 1.9, fontSize: "1rem" }}>Earlier in my career at Bundl Technologies (Swiggy), I developed Python and SQL-based data pipelines and analytics workflows to detect fraud patterns and support machine learning model evaluation, strengthening data-driven risk management processes. This experience, coupled with an academic journey, grounds the approach to problem-solving with a strategic and data-driven mindset — aiming to contribute significantly to technological advancements and industry growth.</p>
+            {resumeData.basics.about.map((para, i) => (
+              <p key={i} style={{ color: "var(--text2)", lineHeight: 1.9, fontSize: "1rem", marginBottom: "1.2rem" }}>
+                {para}
+              </p>
+            ))}
           </div>
         </section>
 
@@ -64,7 +70,7 @@ export default function Home() {
         fontSize: ".78rem", fontFamily: "JetBrains Mono,monospace", letterSpacing: ".08em",
       }}>
         <span style={{ fontFamily: "Syne,sans-serif", fontWeight: 700, color: "var(--accent)" }}>AKS</span>
-        &nbsp;·&nbsp; Ashwani Kumar Singh &nbsp;·&nbsp; Cloud Engineer &nbsp;·&nbsp; Dublin, Ireland
+        &nbsp;·&nbsp; Ashwani Kumar Singh &nbsp;·&nbsp; Cloud Engineer &nbsp;·&nbsp; Bangalore, India
       </footer>
 
       {/* Mobile Bottom Nav */}

@@ -2,10 +2,10 @@
 import Reveal from "./RevealWrapper";
 
 const impacts = [
-  { num: "60%", desc: "Increase in deployment speed via IaC automation at Bethel Digitech" },
-  { num: "99.9%", desc: "Uptime guaranteed through disaster recovery strategy" },
-  { num: "10%", desc: "System efficiency improvement via CloudWatch optimization protocols" },
-  { num: "HIPAA", desc: "Compliance enforced — strict cloud security policies & data safeguarding" },
+  { num: "8+", desc: "Years of experience across AWS, Snowflake, ETL, and data integration environments" },
+  { num: "35%", desc: "Deployment reliability improvement via incident & release management at Bethel Digitech Ireland" },
+  { num: "AWS", desc: "Certified Cloud Practitioner (CLF-C02) — validated cloud architecture and security expertise" },
+  { num: "SNO", desc: "Ascent Snowflake Platform Training APAC — certified in cloud data platform architecture" },
 ];
 
 export default function ImpactStrip() {
@@ -27,7 +27,11 @@ export default function ImpactStrip() {
               onMouseEnter={e => { e.currentTarget.style.transform = "translateY(-4px)"; e.currentTarget.style.boxShadow = "0 12px 40px rgba(79,142,247,0.15)"; }}
               onMouseLeave={e => { e.currentTarget.style.transform = "none"; e.currentTarget.style.boxShadow = "none"; }}
             >
-              <div style={{ fontFamily: "Syne,sans-serif", fontWeight: 800, fontSize: "2.4rem", background: "linear-gradient(135deg,var(--accent),var(--accent3))", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent", backgroundClip: "text" }}>{item.num}</div>
+              <div style={{
+                fontFamily: "Syne,sans-serif", fontWeight: 800, fontSize: "2.4rem",
+                background: "linear-gradient(135deg,var(--accent),var(--accent3))",
+                WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent", backgroundClip: "text",
+              }}>{item.num}</div>
               <div style={{ fontSize: ".82rem", color: "var(--text2)", marginTop: ".4rem", lineHeight: 1.5 }}>{item.desc}</div>
             </div>
           </Reveal>
